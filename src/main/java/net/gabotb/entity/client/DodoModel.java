@@ -152,8 +152,8 @@ public class DodoModel<T extends Entity> extends HierarchicalModel<T> {
 		this.root().getAllParts().forEach(ModelPart::resetPose);
 		this.applyHeadRotation(netHeadYaw, headPitch, ageInTicks);
 
-		this.animateWalk(ModAnimationDefinitions.DODO_WALK, limbSwing, limbSwingAmount, 2f, 2.5f);
-		this.animate(((DodoEntity) entity).idleAnimationState, ModAnimationDefinitions.DODO_IDLE, ageInTicks, 1f);
+		this.animateWalk(ModAnimationDefinitions.DODO_IDLE, limbSwing, limbSwingAmount, 2f, 2.5f);
+		this.animate(((DodoEntity) entity).idleAnimationState, ModAnimationDefinitions.DODO_WALK, ageInTicks, 1f);
 	}
 
 	private void applyHeadRotation(float pNetHeadYaw, float pHeadPitch, float pAgeInTicks) {

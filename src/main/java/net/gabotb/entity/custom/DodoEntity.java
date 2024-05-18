@@ -40,14 +40,13 @@ public class DodoEntity extends Animal {
         } else {
             --this.idleAnimationTimeout;
         }
-
     }
 
 
     @Override
     protected void updateWalkAnimation(float pPartialTick) {
         float f;
-        if (this.getPose() == Pose.SITTING) {
+        if (this.getPose() == Pose.STANDING) {
             f = Math.min(pPartialTick + 6f, 1f);
         } else {
             f = 0f;
